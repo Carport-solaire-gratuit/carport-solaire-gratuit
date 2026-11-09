@@ -145,40 +145,138 @@
       <span class="pf-alerte-close" onclick="document.getElementById('pf-alerte-demarchage').style.display='none'">✕</span>
     </div>
   </div></div>
-  <section class="page-hero"><div class="container">
-    <div class="breadcrumb"><svg class="icon bc-home" aria-hidden="true"><use href="#i-home"></use></svg><a href="index.html">Accueil</a> › Panneaux solaires</div>
-    <h1>Panneaux solaires : produisez votre électricité et économisez</h1>
-    <p>L'autoconsommation solaire vous permet de produire votre propre électricité, de réduire fortement votre facture et de revendre le surplus. Le tout financé en partie par les aides de l'État.</p>
-  </div></section>
-  <section class="section"><div class="container">
-    <div class="section-head"><span class="eyebrow">Les bénéfices</span><h2>Pourquoi passer au solaire en autoconsommation</h2></div>
-    <div class="cards-3">
-      <article class="feature"><div class="feature-ico"><svg class="icon" aria-hidden="true"><use href="#i-euro"></use></svg></div><h3>Jusqu'à 70 % d'économies</h3><p>Consommez l'électricité que vous produisez et réduisez fortement votre facture, protégé contre la hausse des prix de l'énergie.</p></article>
-      <article class="feature"><div class="feature-ico"><svg class="icon" aria-hidden="true"><use href="#i-panel"></use></svg></div><h3>Revente du surplus</h3><p>L'électricité que vous ne consommez pas est rachetée par EDF OA à tarif réglementé, pendant 20 ans.</p></article>
-      <article class="feature"><div class="feature-ico"><svg class="icon" aria-hidden="true"><use href="#i-check-circle"></use></svg></div><h3>Énergie propre</h3><p>Une énergie renouvelable, locale et durable, avec des panneaux garantis jusqu'à 25 ans.</p></article>
+  <!-- EN-TÊTE ARTICLE -->
+  <section class="art-hero">
+    <div class="art-wrap">
+      <nav class="art-breadcrumb" aria-label="Fil d'Ariane">
+        <svg class="bc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
+        <a href="index.html">Accueil</a><span class="bc-sep">›</span><span>Panneaux solaires</span>
+      </nav>
+      <h1 class="art-h1">Panneaux solaires&nbsp;: produisez votre électricité et économisez</h1>
+      <p class="art-maj">Mise à jour : novembre 2026 — Informations fournies à titre indicatif</p>
+      <div class="art-lead">
+        <p>L'autoconsommation solaire vous permet de produire votre propre électricité, de réduire fortement votre facture et de <strong>revendre le surplus</strong>. Le tout financé en partie par les aides de l'État. Voici comment ça marche, ce que vous pouvez espérer, et comment savoir si votre logement est éligible.</p>
+      </div>
     </div>
-  </div></section>
-  <section class="section section-alt"><div class="container narrow prose">
-    <span class="eyebrow">Comment ça marche</span>
-    <h2>De la pose à la production</h2>
-    <p>Que vos panneaux soient posés en toiture, sur un carport ou une pergola, le principe est le même :</p>
-    <ul>
-      <li>Les panneaux captent la lumière et produisent de l'électricité en courant continu.</li>
-      <li>Un onduleur la convertit pour alimenter votre maison.</li>
-      <li>Vous consommez en priorité votre production ; le surplus est revendu.</li>
-      <li>Un installateur <strong>certifié RGE</strong> réalise la pose — condition pour les aides.</li>
-    </ul>
-    <p>Envie de combiner protection du véhicule et production ? Découvrez le <a href="index.html">carport solaire</a> ou la <a href="pergola-solaire.html">pergola solaire</a>.</p>
-    <p><a href="annuaire-rge.html" class="btn btn-ghost"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg> Trouver un installateur RGE près de chez moi</a></p>
-  </div></section>
-  
-  <section class="section section-alt"><div class="container">
-    <div class="cta-band">
-      <div class="cb-ico"><svg class="icon" aria-hidden="true"><use href="#i-clipboard"></use></svg></div>
-      <div class="cb-text"><strong>Combien pouvez-vous économiser ?</strong><span>Vérifiez votre éligibilité en 1 minute et recevez une estimation personnalisée gratuite.</span></div>
-      <a href="index.html#simulateur" class="btn btn-primary">Vérifier mon éligibilité</a>
-    </div>
-  </div></section>
+  </section>
+
+  <!-- CORPS DE L'ARTICLE -->
+  <div class="art">
+    <section class="art-toc" aria-label="Sommaire">
+      <h2 id="sommaire">Sommaire</h2>
+      <ol>
+        <li><a href="#benefices">Pourquoi passer à l'autoconsommation</a></li>
+        <li><a href="#fonctionnement">Comment ça marche, de la pose à la production</a></li>
+        <li><a href="#economies">Économies et revente du surplus</a></li>
+        <li><a href="#aides">Les aides de l'État</a></li>
+        <li><a href="#installation">Toiture, carport ou pergola&nbsp;?</a></li>
+        <li><a href="#rge">Choisir un installateur RGE</a></li>
+        <li><a href="#faq-panneaux">Questions fréquentes</a></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2 id="benefices">Pourquoi passer au solaire en autoconsommation</h2>
+      <p>L'autoconsommation consiste à consommer en priorité l'électricité que vous produisez, et à revendre ce que vous ne consommez pas. Les principaux avantages&nbsp;:</p>
+      <ul>
+        <li><strong>Des économies sur votre facture&nbsp;:</strong> l'électricité que vous produisez et consommez n'est plus achetée au réseau, ce qui vous protège aussi contre la hausse des prix de l'énergie.</li>
+        <li><strong>Un revenu de revente&nbsp;:</strong> le surplus que vous ne consommez pas est racheté par EDF&nbsp;OA à tarif réglementé, pendant 20&nbsp;ans.</li>
+        <li><strong>Une énergie propre et durable&nbsp;:</strong> une production renouvelable et locale, avec des panneaux généralement garantis sur de longues durées.</li>
+      </ul>
+      <div class="art-box art-box--good">
+        <span class="bx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+        <div><strong>Bon à savoir&nbsp;:</strong> plus vous consommez votre propre production (appareils en journée, eau chaude, recharge de véhicule…), plus l'installation est intéressante.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="fonctionnement">Comment ça marche, de la pose à la production</h2>
+      <p>Que vos panneaux soient posés en toiture, sur un carport ou une pergola, le principe reste le même&nbsp;:</p>
+      <ul>
+        <li>Les panneaux captent la lumière et produisent de l'électricité en courant continu.</li>
+        <li>Un onduleur la convertit pour alimenter votre maison.</li>
+        <li>Vous consommez en priorité votre production&nbsp;; le surplus est revendu.</li>
+        <li>Un installateur <strong>certifié RGE</strong> réalise la pose — condition pour mobiliser les aides.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="economies">Économies sur la facture et revente du surplus</h2>
+      <p>En autoconsommation, votre gain vient de deux sources complémentaires&nbsp;: les <strong>économies</strong> sur l'électricité que vous n'achetez plus, et le <strong>revenu</strong> tiré de la revente du surplus.</p>
+      <p>L'ampleur des économies dépend de votre consommation, de votre profil d'usage et de la taille de l'installation. Le surplus non consommé est, lui, racheté dans le cadre de l'obligation d'achat (EDF&nbsp;OA) à un tarif réglementé garanti sur 20&nbsp;ans.</p>
+      <div class="art-box art-box--important">
+        <strong>Important&nbsp;:</strong> aucun chiffre d'économie ou de rentabilité ne peut être garanti sans étude. Le montant réel dépend de votre logement, de votre consommation et des dispositifs en vigueur.
+      </div>
+    </section>
+
+    <section>
+      <h2 id="aides">Les aides de l'État</h2>
+      <p>Plusieurs dispositifs peuvent réduire le coût de votre installation et améliorer sa rentabilité&nbsp;: prime à l'autoconsommation, revente du surplus (EDF&nbsp;OA), TVA réduite selon la puissance, et selon les cas des aides locales. Ces dispositifs sont généralement cumulables.</p>
+      <p>Le détail, les conditions et le fonctionnement de chaque aide sont présentés sur notre page dédiée&nbsp;: <a href="aides.html">les aides de l'État&nbsp;2026</a>.</p>
+      <div class="art-box art-box--warning">
+        <span class="bx-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
+        <div><strong>Vigilance&nbsp;:</strong> méfiez-vous des offres «&nbsp;100&nbsp;% gratuites&nbsp;» présentées comme financées par «&nbsp;l'État&nbsp;» ou «&nbsp;EDF&nbsp;». Nous expliquons ce qu'il en est réellement sur la page <a href="carport-solaire-gratuit-verite.html">«&nbsp;C'est vraiment gratuit ?&nbsp;»</a>.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="installation">Toiture, carport ou pergola&nbsp;: où poser ses panneaux&nbsp;?</h2>
+      <p>Les panneaux peuvent être posés en toiture, mais aussi sur une structure dédiée qui ajoute un usage&nbsp;:</p>
+      <ul>
+        <li><strong>Le carport solaire&nbsp;:</strong> il protège votre véhicule tout en produisant de l'électricité. Découvrez le <a href="index.html">carport solaire</a>.</li>
+        <li><strong>La pergola solaire&nbsp;:</strong> elle ombrage une terrasse et produit de l'électricité. Découvrez la <a href="pergola-solaire.html">pergola solaire</a>.</li>
+      </ul>
+      <p>Dans tous les cas, l'orientation, l'inclinaison et l'ombrage influencent la production. Une étude sur place permet de déterminer la meilleure solution pour votre logement.</p>
+    </section>
+
+    <section>
+      <h2 id="rge">Choisir un installateur RGE</h2>
+      <p>Le recours à un installateur <strong>certifié RGE (Reconnu Garant de l'Environnement)</strong> est généralement indispensable pour mobiliser les aides de l'État. C'est aussi un gage de sérieux pour la qualité de la pose et le respect des règles.</p>
+      <p><a href="annuaire-rge.html" class="btn btn-ghost"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg> Trouver un installateur RGE près de chez moi</a></p>
+      <p style="font-size:14px;color:var(--muted)">Informations fournies à titre indicatif et susceptibles d'évoluer. Seule une étude personnalisée et les organismes officiels font foi. Références&nbsp;: service-public.fr, ademe.fr, photovoltaique.info, EDF&nbsp;OA.</p>
+    </section>
+
+    <section class="art-faq" id="faq-panneaux" aria-label="Questions fréquentes sur les panneaux solaires">
+      <h2 class="art-faq-title">Questions fréquentes sur les panneaux solaires</h2>
+      <details class="art-faq-item">
+        <summary>Qu'est-ce que l'autoconsommation&nbsp;?</summary>
+        <div class="art-faq-ans">C'est le fait de consommer en priorité l'électricité que vos panneaux produisent, plutôt que de l'acheter au réseau. Le surplus que vous ne consommez pas peut être revendu. Plus votre part d'autoconsommation est élevée, plus l'installation est intéressante.</div>
+      </details>
+      <details class="art-faq-item">
+        <summary>Combien puis-je économiser avec des panneaux solaires&nbsp;?</summary>
+        <div class="art-faq-ans">Cela dépend de votre consommation, de votre profil d'usage, de la taille de l'installation et de votre logement. Aucun montant ne peut être garanti sans étude. Une <a href="index.html#simulateur">vérification d'éligibilité gratuite</a> permet d'obtenir une estimation personnalisée.</div>
+      </details>
+      <details class="art-faq-item">
+        <summary>Que devient l'électricité que je ne consomme pas&nbsp;?</summary>
+        <div class="art-faq-ans">Le surplus non consommé est racheté par EDF&nbsp;OA (ou un autre acheteur agréé) dans le cadre de l'obligation d'achat, à un tarif réglementé garanti pendant 20&nbsp;ans. C'est un revenu complémentaire stable.</div>
+      </details>
+      <details class="art-faq-item">
+        <summary>Ai-je droit à des aides de l'État&nbsp;?</summary>
+        <div class="art-faq-ans">Plusieurs dispositifs existent&nbsp;: prime à l'autoconsommation, revente du surplus, TVA réduite selon la puissance et parfois des aides locales. Ils sont généralement cumulables. Le détail figure sur notre page <a href="aides.html">aides de l'État&nbsp;2026</a>.</div>
+      </details>
+      <details class="art-faq-item">
+        <summary>Faut-il un installateur RGE&nbsp;?</summary>
+        <div class="art-faq-ans">Oui, le recours à un installateur <strong>RGE (Reconnu Garant de l'Environnement)</strong> est généralement requis pour bénéficier des aides. Vous en trouverez près de chez vous dans notre <a href="annuaire-rge.html">annuaire des installateurs RGE</a>.</div>
+      </details>
+      <details class="art-faq-item">
+        <summary>Peut-on poser des panneaux ailleurs qu'en toiture&nbsp;?</summary>
+        <div class="art-faq-ans">Oui. Au-delà de la toiture, les panneaux peuvent équiper un <a href="index.html">carport solaire</a> qui protège votre véhicule, ou une <a href="pergola-solaire.html">pergola solaire</a> qui ombrage une terrasse, tout en produisant de l'électricité.</div>
+      </details>
+    </section>
+
+    <section class="section section-alt"><div class="container">
+      <div class="cta-band">
+        <div class="cb-ico"><svg class="icon" aria-hidden="true"><use href="#i-clipboard"></use></svg></div>
+        <div class="cb-text"><strong>Combien pouvez-vous économiser&nbsp;?</strong><span>Vérifiez votre éligibilité en 1&nbsp;minute et recevez une estimation personnalisée gratuite.</span></div>
+        <a href="index.html#simulateur" class="btn btn-primary">Vérifier mon éligibilité</a>
+      </div>
+    </div></section>
+  </div>
+
+  <!-- Données structurées : fil d'Ariane, article, FAQ -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://carport-solaire-gratuit.fr/"},{"@type":"ListItem","position":2,"name":"Panneaux solaires","item":"https://carport-solaire-gratuit.fr/panneaux-solaires.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Panneaux solaires : produisez votre électricité et économisez","description":"Panneaux solaires en autoconsommation : économies sur la facture, revente du surplus (EDF OA), aides de l'État et pose par un installateur RGE.","inLanguage":"fr-FR","author":{"@type":"Organization","name":"Carport Solaire Gratuit","url":"https://carport-solaire-gratuit.fr/"},"publisher":{"@type":"Organization","name":"Carport Solaire Gratuit","url":"https://carport-solaire-gratuit.fr/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://carport-solaire-gratuit.fr/panneaux-solaires.html"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Qu'est-ce que l'autoconsommation ?","acceptedAnswer":{"@type":"Answer","text":"C'est le fait de consommer en priorité l'électricité que vos panneaux produisent, plutôt que de l'acheter au réseau. Le surplus que vous ne consommez pas peut être revendu. Plus votre part d'autoconsommation est élevée, plus l'installation est intéressante."}},{"@type":"Question","name":"Combien puis-je économiser avec des panneaux solaires ?","acceptedAnswer":{"@type":"Answer","text":"Cela dépend de votre consommation, de votre profil d'usage, de la taille de l'installation et de votre logement. Aucun montant ne peut être garanti sans étude. Une vérification d'éligibilité gratuite permet d'obtenir une estimation personnalisée."}},{"@type":"Question","name":"Que devient l'électricité que je ne consomme pas ?","acceptedAnswer":{"@type":"Answer","text":"Le surplus non consommé est racheté par EDF OA (ou un autre acheteur agréé) dans le cadre de l'obligation d'achat, à un tarif réglementé garanti pendant 20 ans. C'est un revenu complémentaire stable."}},{"@type":"Question","name":"Ai-je droit à des aides de l'État ?","acceptedAnswer":{"@type":"Answer","text":"Plusieurs dispositifs existent : prime à l'autoconsommation, revente du surplus, TVA réduite selon la puissance et parfois des aides locales. Ils sont généralement cumulables. Le détail figure sur notre page aides de l'État 2026."}},{"@type":"Question","name":"Faut-il un installateur RGE ?","acceptedAnswer":{"@type":"Answer","text":"Oui, le recours à un installateur RGE (Reconnu Garant de l'Environnement) est généralement requis pour bénéficier des aides. Vous en trouverez près de chez vous dans notre annuaire des installateurs RGE."}},{"@type":"Question","name":"Peut-on poser des panneaux ailleurs qu'en toiture ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Au-delà de la toiture, les panneaux peuvent équiper un carport solaire qui protège votre véhicule, ou une pergola solaire qui ombrage une terrasse, tout en produisant de l'électricité."}}]}</script>
   <!-- PIED DE PAGE PORTAIL -->
   <footer class="pf-footer">
     <div class="pf-footer-main">

@@ -853,7 +853,7 @@ h3 { font-size: 18px; font-weight: 700; }
 .art-breadcrumb .bc-sep { color: var(--muted); }
 .art-breadcrumb .bc-ico { width: 1em; height: 1em; color: var(--muted); }
 
-.art-h1 { font-size: 30px; line-height: 1.2; font-weight: 800; color: var(--ink); margin: 0 0 10px; }
+.art-h1 { font-size: 26px; line-height: 1.25; font-weight: 700; color: var(--ink); margin: 0 0 10px; }
 .art-maj { font-size: 14px; color: var(--muted); margin: 0 0 16px; }
 .art-lead p { font-size: 18px; line-height: 1.7; color: var(--ink-soft); margin: 0 0 12px; }
 .art-lead p:last-child { margin-bottom: 0; }
