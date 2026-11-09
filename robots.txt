@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://carport-solaire-gratuit.fr/sitemap.xml
