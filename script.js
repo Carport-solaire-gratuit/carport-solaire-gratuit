@@ -2,13 +2,10 @@
    Carport Solaire Gratuit — logique du simulateur + envoi lead
    ========================================================= */
 
-// --- CONFIG -------------------------------------------------
-// Collez ici l'URL de votre Web App Google Apps Script (voir GUIDE-GOOGLE-SHEET.md)
-// Tant que ce champ est vide, le formulaire fonctionne en mode démo (aucun envoi réel).
-const CONFIG = {
-  sheetEndpoint: "https://script.google.com/macros/s/AKfycbxXJpM4fMaUmCSdSRt_FRkDaKsLNdA8Qzy__luoloV9-4C1xC_re81xTexW0bA95bjC/exec", // ex: "https://script.google.com/macros/s/AKfy.../exec"
-  secret: "19b7374181178bf7e9b6fef0edb1781b", // doit être identique au SECRET du script Apps Script
-};
+// --- CONFIG : envoi des leads par email via Web3Forms (https://web3forms.com) ---
+// Chaque demande du formulaire arrive par email dans contact@carport-solaire-gratuit.fr.
+// (Clé publique, prévue pour être utilisée côté navigateur.)
+const WEB3FORMS_KEY = "0cdc34ca-32fc-4e0e-a353-37cb3d28ec31";
 
 const form = document.getElementById("leadForm");
 
@@ -106,41 +103,54 @@ if (form) {
 
   render();
 
-  // --- Envoi du lead ---
+  // --- Envoi du lead par email (Web3Forms) ---
+  const val = (name) => (form.elements[name] ? String(form.elements[name].value).trim() : "");
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (!validateStep(steps[current])) return;
     // anti-spam honeypot
     if (form.website.value) return;
 
-    const data = Object.fromEntries(new FormData(form).entries());
-    // projet : choix multiple -> toutes les cases cochees
     const projets = Array.from(form.querySelectorAll('input[name="projet"]:checked')).map((c) => c.value);
-    data.projet = projets.join(", ");
-    data.consent = form.consent.checked ? "oui" : "non";
-    data.date = new Date().toISOString();
-    data.source = "carport-solaire-gratuit.fr";
-    data.page = location.pathname;
-    data.secret = CONFIG.secret;
+
+    // Charge utile envoyée à Web3Forms (clés lisibles => email bien présenté)
+    const payload = {
+      access_key: WEB3FORMS_KEY,
+      subject: "Nouveau lead carport solaire : " + val("prenom") + " " + val("nom") + " (" + val("codePostal") + ")",
+      from_name: "Site Carport Solaire Gratuit",
+      "Projet": projets.join(", "),
+      "Prénom": val("prenom"),
+      "Nom": val("nom"),
+      "Téléphone": val("telephone"),
+      "Email": val("email"),
+      "Code postal": val("codePostal"),
+      "Ville": val("ville"),
+      "Statut": val("statut"),
+      "Type de bien": val("logement"),
+      "Espace extérieur": val("espace"),
+      "Facture mensuelle": val("facture"),
+      "Consentement RGPD": form.consent.checked ? "oui" : "non",
+      "Page": location.pathname,
+      replyto: val("email"),
+    };
 
     btnSubmit.disabled = true;
     btnSubmit.textContent = "Envoi en cours…";
 
     try {
-      if (CONFIG.sheetEndpoint) {
-        await fetch(CONFIG.sheetEndpoint, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "text/plain;charset=utf-8" },
-          body: JSON.stringify(data),
-        });
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = await res.json().catch(() => ({}));
+      if (res.ok && result.success) {
+        form.style.display = "none";
+        if (successBox) successBox.hidden = false;
       } else {
-        // mode démo : aucun endpoint configuré
-        await new Promise((r) => setTimeout(r, 600));
-        console.info("[DÉMO] Lead capturé (non envoyé) :", data);
+        throw new Error(result.message || "Échec de l'envoi");
       }
-      form.style.display = "none";
-      if (successBox) successBox.hidden = false;
     } catch (err) {
       btnSubmit.disabled = false;
       btnSubmit.textContent = "Recevoir mon étude gratuite →";
