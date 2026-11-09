@@ -830,3 +830,120 @@ h3 { font-size: 18px; font-weight: 700; }
 .form-section .section-head .section-sub { max-width: 640px; margin: .6rem auto 0; color: var(--ink-soft); }
 .form-section .hero-form { min-width: 0; }
 .form-section .quiz-card { position: static; max-width: 640px; margin: 0 auto; }
+
+/* =========================================================
+   CONTENU "ARTICLE" LARGE (inspiré du modèle CGH) — pages de contenu
+   Police système + marine #031B69 déjà définies plus haut.
+   ========================================================= */
+
+/* Bandeau vigilance : espace sous le bandeau (ne mord plus sur le bloc du dessous) */
+.vigilance-bar { padding: 16px 0 20px; }
+
+/* ---- En-tête d'article : bande pleine largeur claire + fil d'Ariane + H1 + intro ---- */
+.art-hero { position: relative; padding: 34px 0 40px; }
+.art-hero::before {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 50%;
+  width: 100vw; margin-left: -50vw; background: var(--bg-alt); z-index: -1;
+}
+.art-wrap { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 16px; }
+
+.art-breadcrumb { font-size: 14px; color: #444; margin: 0 0 14px; display: flex; align-items: center; gap: .4rem; flex-wrap: wrap; }
+.art-breadcrumb a { color: var(--navy); text-decoration: none; border-bottom: 1px dotted var(--navy); font-weight: 600; }
+.art-breadcrumb a:hover { opacity: .85; }
+.art-breadcrumb .bc-sep { color: var(--muted); }
+.art-breadcrumb .bc-ico { width: 1em; height: 1em; color: var(--muted); }
+
+.art-h1 { font-size: 30px; line-height: 1.2; font-weight: 800; color: var(--ink); margin: 0 0 10px; }
+.art-maj { font-size: 14px; color: var(--muted); margin: 0 0 16px; }
+.art-lead p { font-size: 18px; line-height: 1.7; color: var(--ink-soft); margin: 0 0 12px; }
+.art-lead p:last-child { margin-bottom: 0; }
+
+/* ---- Corps de l'article ---- */
+.art { width: 100%; max-width: var(--container); margin: 0 auto 54px; padding: 0 16px; color: #333; }
+.art > section { margin-bottom: 30px; }
+.art h2 { font-size: 24px; font-weight: 700; color: var(--ink); margin: 0 0 16px; line-height: 1.25; }
+.art h3 { font-size: 18px; font-weight: 700; color: var(--ink); margin: 24px 0 10px; line-height: 1.3; }
+.art p { font-size: 16px; line-height: 1.7; margin: 0 0 14px; color: #444; }
+.art ul, .art ol { margin: 0 0 14px 20px; padding: 0; font-size: 16px; line-height: 1.7; color: #444; }
+.art li { margin-bottom: 6px; }
+.art a { color: var(--navy); font-weight: 600; text-decoration: none; border-bottom: 1px dotted var(--navy); }
+.art a:hover { opacity: .85; }
+.art strong { font-weight: 600; }
+.art h2[id], .art h3[id] { scroll-margin-top: 130px; }
+
+/* ---- Encadrés ---- */
+.art-box {
+  background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--navy);
+  border-radius: 6px; padding: 14px 18px; font-size: 15px; line-height: 1.6; color: #444;
+  box-shadow: 0 1px 5px rgba(3,27,105,.05); margin: 16px 0;
+}
+.art-box--important, .art-box--warning { border-color: #f3d0c8; border-left-color: #A32D2D; }
+.art-box--good { border-color: #cce8d6; border-left-color: #198754; }
+.art-box--warning, .art-box--good { display: flex; align-items: flex-start; gap: 10px; }
+.art-box .bx-ico { width: 20px; height: 20px; flex: 0 0 20px; margin-top: 1px; }
+.art-box--warning .bx-ico { color: #A32D2D; }
+.art-box--good .bx-ico { color: #198754; }
+
+/* ---- Tableau ---- */
+.art-table-wrap {
+  background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: auto;
+  box-shadow: 0 1px 5px rgba(3,27,105,.05); margin: 10px 0 16px;
+}
+.art-table { width: 100%; border-collapse: collapse; min-width: 520px; }
+.art-table th, .art-table td { padding: 12px 14px; text-align: left; font-size: 15px; color: #444; }
+.art-table thead th { background: var(--navy); color: #fff; font-weight: 700; }
+.art-table tbody tr { border-top: 1px solid #eef1fb; }
+.art-table tbody tr:nth-child(even) { background: var(--bg-alt); }
+
+/* ---- Sommaire ---- */
+.art-toc { background: var(--bg-alt); border: 1px solid var(--line); border-radius: 10px; padding: 20px 24px; margin: 0 0 30px; }
+.art-toc h2 { font-size: 18px; margin: 0 0 10px; }
+.art-toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 40px; }
+.art-toc li { margin: .32rem 0; break-inside: avoid; font-size: 15px; line-height: 1.5; }
+.art-toc a { color: var(--navy); border-bottom: 1px dotted var(--navy); text-decoration: none; font-weight: 600; }
+.art-toc a:hover { opacity: .85; }
+@media (max-width: 700px) { .art-toc ol { columns: 1; } }
+
+/* ---- Cartes CTA (grille 4) ---- */
+.art-cta-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 0 0 30px; }
+.art-cta-card {
+  background: #fff; border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(3,27,105,.05); padding: 20px 22px;
+  display: flex; flex-direction: column; gap: 16px; justify-content: space-between;
+}
+.art-cta-card .cc-top { display: flex; gap: 12px; align-items: flex-start; }
+.art-cta-card .cc-ico { width: 30px; height: 30px; flex: 0 0 30px; color: var(--navy); }
+.art-cta-card h3 { margin: 0; font-size: 17px; color: var(--navy); line-height: 1.25; }
+.art-cta-card p { margin: 4px 0 0; font-size: 14px; line-height: 1.55; color: #444; }
+.art-cta-card .btn { align-self: stretch; text-align: center; }
+@media (max-width: 1200px) { .art-cta-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .art-cta-grid { grid-template-columns: 1fr; } }
+
+/* ---- FAQ (accordéon) ---- */
+.art-faq { background: var(--bg-alt); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin: 30px 0; }
+.art-faq-title { margin: 0; padding: 20px 24px 10px; font-size: 22px; color: var(--ink); }
+.art-faq-item { padding: 14px 24px; border-top: 1px solid var(--line); background: #fff; }
+.art-faq-item summary { cursor: pointer; font-weight: 700; list-style: none; color: var(--navy); display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 16px; }
+.art-faq-item summary::-webkit-details-marker { display: none; }
+.art-faq-item summary::after { content: "+"; font-size: 22px; line-height: 1; color: var(--navy); flex: 0 0 auto; }
+.art-faq-item[open] summary::after { content: "\2013"; }
+.art-faq-ans { margin-top: 10px; line-height: 1.7; font-size: 16px; color: #444; }
+.art-faq-ans p { margin: 10px 0 0; }
+.art-faq-ans ul, .art-faq-ans ol { margin: 8px 0 0 20px; }
+.art-faq-ans a { color: var(--navy); font-weight: 600; text-decoration: none; border-bottom: 1px dotted var(--navy); }
+
+/* ---- Cohérence d'échelle avec le reste du site (zoom 0.85 sous 1920px) ---- */
+@media (max-width: 1920px) {
+  .art-hero, .art { zoom: 0.85; }
+}
+
+/* ---- Header : élargir pour coller davantage aux bords (logo plus à gauche, recherche plus à droite) ----
+   Approche alignée sur le modèle ; à ajuster visuellement. */
+.pf-gouvbar, .pf-id, .pf-mainbar, .pf-actions { max-width: 1860px; }
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  .art-h1 { font-size: 24px; }
+  .art-lead p { font-size: 16px; }
+  .art-faq-title { font-size: 20px; }
+}
