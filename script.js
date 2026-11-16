@@ -114,6 +114,10 @@ if (form) {
 
     const projets = Array.from(form.querySelectorAll('input[name="projet"]:checked')).map((c) => c.value);
 
+    // Provenance du visiteur (capturée à l'arrivée par le script en <head>)
+    let src = {};
+    try { src = JSON.parse(sessionStorage.getItem("csg_src") || "{}"); } catch (e) {}
+
     // Charge utile envoyée à Web3Forms (clés lisibles => email bien présenté)
     const payload = {
       access_key: WEB3FORMS_KEY,
@@ -131,7 +135,11 @@ if (form) {
       "Espace extérieur": val("espace"),
       "Facture mensuelle": val("facture"),
       "Consentement RGPD": form.consent.checked ? "oui" : "non",
-      "Page": location.pathname,
+      "Source": src.source || "Direct / inconnu",
+      "Référent": src.referent || "(aucun)",
+      "Page d'arrivée": src.arrivee || location.pathname,
+      "Campagne (UTM)": src.utm || "—",
+      "Page du formulaire": location.pathname,
       replyto: val("email"),
     };
 

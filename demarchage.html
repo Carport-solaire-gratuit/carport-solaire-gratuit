@@ -14,6 +14,8 @@
   <meta property="og:url" content="https://carport-solaire-gratuit.fr/demarchage.html" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
+  <!-- Capture de la provenance du visiteur (1re page, persistée pour le formulaire) -->
+  <script>(function(){try{if(sessionStorage.getItem("csg_src"))return;var p=new URLSearchParams(location.search),ref=document.referrer||"",src="Direct / inconnu",u=p.get("utm_source");if(u){src=u;}else if(ref){try{var h=new URL(ref).hostname.replace(/^www\./,"");if(h.indexOf("carport-solaire-gratuit.fr")>-1)src="Direct / inconnu";else if(h.indexOf("google")>-1)src="Google";else if(h.indexOf("bing")>-1)src="Bing";else if(h.indexOf("yahoo")>-1)src="Yahoo";else if(h.indexOf("duckduckgo")>-1)src="DuckDuckGo";else if(h.indexOf("qwant")>-1)src="Qwant";else if(h.indexOf("ecosia")>-1)src="Ecosia";else if(h.indexOf("facebook")>-1||h.indexOf("instagram")>-1||h.indexOf("t.co")>-1||h.indexOf("linkedin")>-1)src="Réseaux sociaux";else src=h;}catch(e){}}sessionStorage.setItem("csg_src",JSON.stringify({source:src,referent:ref||"(aucun)",arrivee:location.pathname+location.search,utm:[p.get("utm_source"),p.get("utm_medium"),p.get("utm_campaign")].filter(Boolean).join(" / ")}));}catch(e){}})();</script>
 </head>
 <body>
 <input type="checkbox" id="nav-toggle" class="nav-toggle-cb" aria-hidden="true">
