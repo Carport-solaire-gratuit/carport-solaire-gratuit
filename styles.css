@@ -952,3 +952,41 @@ h3 { font-size: 18px; font-weight: 700; }
   .art-lead p { font-size: 16px; }
   .art-faq-title { font-size: 20px; }
 }
+
+/* =========================================================
+   PAGE CONTACT (2 colonnes : téléphone / demande de rappel)
+   ========================================================= */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin: 0 0 30px; align-items: start; }
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+
+.contact-card { background: #fff; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 2px 8px rgba(3,27,105,.05); padding: 24px 26px; }
+.contact-card--gris { background: var(--bg-alt); }
+.contact-card h2 { margin: 0 0 10px; font-size: 22px; font-weight: 700; color: var(--ink); line-height: 1.25; }
+.contact-card h3 { margin: 20px 0 8px; font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1.3; }
+.contact-card p { font-size: 15px; line-height: 1.7; color: #444; margin: 0 0 10px; }
+.contact-card ul { margin: 0 0 10px 20px; padding: 0; font-size: 15px; line-height: 1.7; color: #444; }
+.contact-card li { margin-bottom: 5px; }
+.contact-card a { color: var(--navy); font-weight: 600; text-decoration: none; border-bottom: 1px dotted var(--navy); }
+.contact-card a:hover { opacity: .85; }
+
+.contact-tel { font-size: 30px; font-weight: 700; color: var(--navy); white-space: nowrap; border-bottom: 2px dotted var(--navy); }
+.contact-sub { font-size: 14px; color: var(--muted); margin: 0 0 4px; }
+
+/* Formulaire de rappel */
+.contact-form .field { margin-bottom: 12px; }
+.contact-form .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 560px) { .contact-form .field-row { grid-template-columns: 1fr; } }
+.contact-form label { display: block; font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+.contact-form input[type="text"], .contact-form input[type="tel"], .contact-form input[type="email"],
+.contact-form select, .contact-form textarea {
+  width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius);
+  font: inherit; font-size: 15px; background: #fff; color: var(--ink);
+}
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: 2px solid var(--blue); outline-offset: 1px; border-color: var(--blue); }
+.contact-form textarea { min-height: 88px; resize: vertical; }
+.contact-form .consent { display: flex; gap: 8px; align-items: flex-start; font-size: 13.5px; line-height: 1.5; color: #444; margin: 12px 0 6px; font-weight: 400; }
+.contact-form .consent input { width: auto; margin-top: 3px; flex: none; }
+.contact-form .hp-field { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; }
+
+.contact-success { background: #fff; border: 1px solid #cce8d6; border-left: 4px solid #198754; border-radius: 8px; padding: 16px 18px; font-size: 15px; line-height: 1.7; color: #444; }
+.contact-success strong { color: #198754; }
