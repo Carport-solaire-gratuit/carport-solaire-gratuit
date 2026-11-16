@@ -1,0 +1,13 @@
+{
+  "name": "Carport Solaire Gratuit",
+  "short_name": "Carport Solaire",
+  "lang": "fr",
+  "start_url": "/",
+  "display": "browser",
+  "theme_color": "#031B69",
+  "background_color": "#ffffff",
+  "icons": [
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}
