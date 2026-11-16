@@ -840,9 +840,7 @@ h3 { font-size: 18px; font-weight: 700; }
 /* Espace blanc entre le bandeau d'alerte et la bande colorée du hero (comme sur l'accueil) */
 .art-hero { margin-top: 20px; }
 
-/* Aligner le logo, le titre et la phrase du bandeau haut sur le menu (décalé de 164px) */
-.pf-gouvbar { padding-left: 196px; }
-.pf-id { padding-left: 196px; }
+/* (alignement de l'en-tête : voir « COLONNE UNIQUE DU SITE » en fin de fichier) */
 
 /* ---- En-tête d'article : bande pleine largeur claire + fil d'Ariane + H1 + intro ---- */
 .art-hero { position: relative; padding: 34px 0 40px; }
@@ -990,3 +988,24 @@ h3 { font-size: 18px; font-weight: 700; }
 
 .contact-success { background: #fff; border: 1px solid #cce8d6; border-left: 4px solid #198754; border-radius: 8px; padding: 16px 18px; font-size: 15px; line-height: 1.7; color: #444; }
 .contact-success strong { color: #198754; }
+
+/* =========================================================
+   COLONNE UNIQUE DU SITE
+   Référence = le bandeau d'alerte (.pf-alerte-wrap) :
+   max-width 1600px + padding 0 24px  =>  colonne visible de 1552px.
+   En-tête, menu, accès rapide et contenu des pages s'alignent dessus,
+   pour que tout démarre et finisse exactement sur la même verticale.
+   ========================================================= */
+.pf-gouvbar,
+.pf-id,
+.pf-mainbar,
+.pf-actions { max-width: 1600px; padding-left: 24px; padding-right: 24px; }
+
+/* Plus d'indentation : le menu et l'accès rapide démarrent sur la colonne */
+.pf-nav { margin-left: 0; }
+.pf-quick { margin-left: 0; }
+.pf-quick-label { position: static; right: auto; margin-right: 12px; }
+
+/* Le contenu des pages suit exactement la même colonne */
+.art,
+.art-wrap { padding-left: 24px; padding-right: 24px; }
