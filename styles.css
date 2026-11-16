@@ -837,7 +837,12 @@ h3 { font-size: 18px; font-weight: 700; }
    ========================================================= */
 
 /* Bandeau vigilance : espace sous le bandeau (ne mord plus sur le bloc du dessous) */
-.vigilance-bar { padding: 16px 0 20px; }
+/* Espace blanc entre le bandeau d'alerte et la bande colorée du hero (comme sur l'accueil) */
+.art-hero { margin-top: 20px; }
+
+/* Aligner le logo, le titre et la phrase du bandeau haut sur le menu (décalé de 164px) */
+.pf-gouvbar { padding-left: 196px; }
+.pf-id { padding-left: 196px; }
 
 /* ---- En-tête d'article : bande pleine largeur claire + fil d'Ariane + H1 + intro ---- */
 .art-hero { position: relative; padding: 34px 0 40px; }
