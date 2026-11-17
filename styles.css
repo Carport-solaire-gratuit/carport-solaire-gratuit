@@ -844,9 +844,13 @@ h3 { font-size: 18px; font-weight: 700; }
 
 /* ---- En-tête d'article : bande pleine largeur claire + fil d'Ariane + H1 + intro ---- */
 .art-hero { position: relative; padding: 34px 0 40px; }
+/* La bande claire couvre toute la largeur de la page.
+   Ne pas repasser par 100vw : .art-hero porte un zoom 0.85 sous 1920px,
+   qui reduirait 100vw d'autant (1800px -> 1530px) et laisserait des trous
+   a gauche et a droite. .art-hero occupe deja toute la largeur : on s'y cale. */
 .art-hero::before {
-  content: ""; position: absolute; top: 0; bottom: 0; left: 50%;
-  width: 100vw; margin-left: -50vw; background: var(--bg-alt); z-index: -1;
+  content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+  width: auto; margin-left: 0; background: var(--bg-alt); z-index: -1;
 }
 .art-wrap { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 16px; }
 
