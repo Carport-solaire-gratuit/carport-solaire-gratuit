@@ -838,7 +838,11 @@ h3 { font-size: 18px; font-weight: 700; }
 
 /* Bandeau vigilance : espace sous le bandeau (ne mord plus sur le bloc du dessous) */
 /* Espace blanc entre le bandeau d'alerte et la bande colorée du hero (comme sur l'accueil) */
-.art-hero { margin-top: 20px; }
+/* Air au-dessus (sous le bandeau d'alerte) et SURTOUT en dessous : le
+   sommaire qui suit a exactement la meme couleur de fond que la bande
+   (rgb(244,246,251)). Sans cet ecart, les deux se touchaient au pixel
+   pres et se fondaient en un seul bloc gris. */
+.art-hero { margin-top: 20px; margin-bottom: 32px; }
 
 /* (alignement de l'en-tête : voir « COLONNE UNIQUE DU SITE » en fin de fichier) */
 
