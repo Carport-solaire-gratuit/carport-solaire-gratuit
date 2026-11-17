@@ -873,8 +873,12 @@ h3 { font-size: 18px; font-weight: 700; }
 .art p { font-size: 16px; line-height: 1.7; margin: 0 0 14px; color: #444; }
 .art ul, .art ol { margin: 0 0 14px 20px; padding: 0; font-size: 16px; line-height: 1.7; color: #444; }
 .art li { margin-bottom: 6px; }
-.art a { color: var(--navy); font-weight: 600; text-decoration: none; border-bottom: 1px dotted var(--navy); }
-.art a:hover { opacity: .85; }
+/* Les liens de texte sont soulignes en pointilles bleu marine.
+   Exclure .btn : sinon cette regle, plus specifique que .btn-primary et
+   placee apres, repeignait le texte des boutons en bleu marine sur fond
+   bleu marine, les rendant illisibles. */
+.art a:not(.btn) { color: var(--navy); font-weight: 600; text-decoration: none; border-bottom: 1px dotted var(--navy); }
+.art a:not(.btn):hover { opacity: .85; }
 .art strong { font-weight: 600; }
 .art h2[id], .art h3[id] { scroll-margin-top: 130px; }
 
